@@ -1,0 +1,16 @@
+﻿@model IEnumerable<GiftOfTheGivers_ST10239864.Models.Donation>
+<h2>Donations</h2>
+<p><a class="btn btn-orange" asp-action="Create">Make a Donation</a></p>
+<table class="table">
+    <thead><tr><th>Resource</th><th>Quantity</th><th>Date</th></tr></thead>
+    <tbody>
+        @foreach (var d in Model)
+        {
+            <tr>
+                <td>@d.ResourceType</td>
+                <td>@d.Quantity</td>
+                <td>@d.DonatedAt.ToLocalTime().ToString("g")</td>
+            </tr>
+        }
+    </tbody>
+</table>

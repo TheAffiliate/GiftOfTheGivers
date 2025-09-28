@@ -1,0 +1,21 @@
+﻿@model IEnumerable<GiftOfTheGivers_ST10239864.Models.Volunteer>
+<h2>Volunteers</h2>
+<p><a class="btn btn-orange" asp-action="Register">Register as Volunteer</a></p>
+
+@if (TempData["Message"] != null)
+{
+    <div class="alert alert-success">@TempData["Message"]</div>
+}
+
+<table class="table">
+    <thead><tr><th>Name</th><th>Skills</th></tr></thead>
+    <tbody>
+        @foreach (var v in Model)
+        {
+            <tr>
+                <td>@v.FullName</td>
+                <td>@v.Skills</td>
+            </tr>
+        }
+    </tbody>
+</table>

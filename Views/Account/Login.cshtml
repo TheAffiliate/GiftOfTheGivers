@@ -1,0 +1,18 @@
+﻿@model GiftOfTheGivers_ST10239864.Models.ViewModels.LoginViewModel
+<h2>Login</h2>
+
+<form asp-action="Login" method="post">
+    <div class="mb-3">
+        <label asp-for="Email"></label>
+        <input asp-for="Email" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label asp-for="Password"></label>
+        <input asp-for="Password" type="password" class="form-control" />
+    </div>
+    <div class="mb-3 form-check">
+        <input asp-for="RememberMe" class="form-check-input" />
+        <label asp-for="RememberMe" class="form-check-label">Remember me</label>
+    </div>
+    <button class="btn btn-orange">Login</button>
+</form>

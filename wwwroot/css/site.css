@@ -1,0 +1,61 @@
+/* Palette */
+:root {
+    --deep-green: #006400;
+    --orange: #FF8C00;
+    --muted-bg: #f9f9f9;
+}
+
+/* Base */
+body {
+    background: var(--muted-bg);
+    font-family: "Segoe UI", Roboto, Arial, sans-serif;
+    color: #222;
+}
+
+/* Navbar and footer */
+.bg-deepgreen {
+    background-color: var(--deep-green) !important;
+}
+
+.text-orange {
+    color: var(--orange) !important;
+}
+
+/* Buttons */
+.btn-orange {
+    background-color: var(--orange);
+    color: #fff;
+    border: none;
+}
+
+    .btn-orange:hover {
+        background-color: #e67600;
+    }
+
+/* Hero */
+.hero {
+    background: linear-gradient(90deg, rgba(0,100,0,0.95), rgba(0,100,0,0.85));
+    color: white;
+    padding: 60px 20px;
+    border-radius: 6px;
+}
+
+/* Cards */
+.program-card {
+    border-left: 6px solid var(--orange);
+    padding: 18px;
+    background: white;
+    border-radius: 6px;
+}
+
+/* Footer */
+.footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Minor */
+.container {
+    max-width: 1100px;
+}

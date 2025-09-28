@@ -1,0 +1,77 @@
+﻿@{
+    ViewData["Title"] = "Home";
+}
+<div class="hero">
+    <div class="container">
+        <h1 class="display-5">Gift Of The Givers — Disaster Relief & Community Support</h1>
+        <p class="lead">Providing emergency response, humanitarian assistance, and sustainable programmes to communities in need.</p>
+        <p>
+            <a class="btn btn-orange btn-lg me-2" asp-controller="Donation" asp-action="Create">Donate</a>
+            <a class="btn btn-outline-light btn-lg" asp-controller="Volunteer" asp-action="Register">Volunteer</a>
+        </p>
+    </div>
+</div>
+
+<section class="mt-4">
+    <div class="row g-4">
+        <div class="col-md-6">
+            <div class="program-card">
+                <h4>Emergency Response</h4>
+                <p>Rapid mobilisation of aid—food, water, medical supplies and rescue support—in the immediate aftermath of disasters.</p>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="program-card">
+                <h4>Food & Shelter</h4>
+                <p>Distribution of relief packs, temporary shelter, and rehabilitation support to displaced families.</p>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="program-card">
+                <h4>Healthcare & Medical</h4>
+                <p>Medical camps, medicines, and psychological support for affected communities.</p>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="program-card">
+                <h4>Long-term Community Programmes</h4>
+                <p>Livelihood programs, education support, and infrastructure projects to build resilience.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="mt-5">
+    <h3>Recent Impact</h3>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card mb-3">
+                <img class="card-img-top" src="~/images/impact1.jpg" alt="impact" />
+                <div class="card-body">
+                    <h5 class="card-title">Flood Relief</h5>
+                    <p class="card-text">Delivered 5,000 food packs and temporary shelter in recent flood response.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card mb-3">
+                <img class="card-img-top" src="~/images/impact2.jpg" alt="impact" />
+                <div class="card-body">
+                    <h5 class="card-title">Medical Camps</h5>
+                    <p class="card-text">Organized free medical clinics in underserved regions.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card mb-3">
+                <img class="card-img-top" src="~/images/impact3.jpg" alt="impact" />
+                <div class="card-body">
+                    <h5 class="card-title">Community Uplift</h5>
+                    <p class="card-text">Small business grants & training for 200 families.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
