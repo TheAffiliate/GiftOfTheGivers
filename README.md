@@ -1,4 +1,6 @@
-Gift Of The Givers – Disaster Relief Management System
+
+# Gift Of The Givers – Disaster Relief Management System
+
 
 This is an ASP.NET Core MVC application built to support Gift Of The Givers, enabling the organization to efficiently manage donations, volunteers, and incidents in disaster relief efforts.
 
@@ -35,6 +37,7 @@ Incidents (Emergency Tracking)
 Capture and display incidents that require relief.
 
 Volunteers and donors can align efforts with current needs.
+
 
 📂 Project Structure
 GiftOfTheGivers_ST10239864/
@@ -74,6 +77,25 @@ dotnet run
 
 Then open https://localhost:7095
  in your browser.
+=======
+📂 Project Structure GiftOfTheGivers_ST10239864/ │── Controllers/ # MVC Controllers (Donation, Volunteer, Incident, Home) │── Models/ # Data models (Donation, Volunteer, Incident, ApplicationUser) │── Services/ # Business logic & database services │── Data/ # AppDbContext and EF Core setup │── Views/ # Razor views (UI pages) │ ├── Donation/ │ ├── Volunteer/ │ ├── Incident/ │ └── Shared/ │── wwwroot/ # Static files (CSS, JS, images) │── Program.cs # App startup │── appsettings.json # Configurations (DB connection string, Identity) │── README.md # Documentation (this file)
+
+⚙️ Installation & Setup
+
+Clone the repository git clone https://github.com/your-username/gift-of-the-givers.git cd gift-of-the-givers
+
+Configure the database
+
+Update your SQL Server connection string in appsettings.json:
+
+"ConnectionStrings": { "DefaultConnection": "Server=(localdb)\mssqllocaldb;Database=GiftOfTheGiversDB;Trusted_Connection=True;MultipleActiveResultSets=true" }
+
+Run Entity Framework migrations dotnet ef database update
+
+Build and run dotnet run
+
+Then open https://localhost:7095 in your browser.
+
 
 🛠️ Technologies Used
 
@@ -101,5 +123,7 @@ Add reporting & analytics for relief efforts.
 
 👨‍💻 Author
 
+
 Katlego Sebona
 Disaster Relief Management System for Gift Of The Givers
+
