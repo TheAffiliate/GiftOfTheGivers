@@ -24,6 +24,7 @@ namespace GiftOfTheGivers_ST10239864.Controllers
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public async Task<IActionResult> Register(RegisterViewModel model)
         {
             if (!ModelState.IsValid)
@@ -37,7 +38,8 @@ namespace GiftOfTheGivers_ST10239864.Controllers
                 Location = model.Location
             };
 
-            var result = await _userOperations.RegisterAsync(user, model.Password); // <-- pass password
+            // ✅ Auto login enabled here
+            var result = await _userOperations.RegisterAsync(user, model.Password, autoLogin: true);
 
             if (result.Succeeded)
             {
@@ -62,12 +64,13 @@ namespace GiftOfTheGivers_ST10239864.Controllers
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public async Task<IActionResult> Login(LoginViewModel model)
         {
             if (!ModelState.IsValid)
                 return View(model);
 
-            var result = await _userOperations.LoginAsync(model.Email, model.Password, model.RememberMe); // <-- pass password
+            var result = await _userOperations.LoginAsync(model.Email, model.Password, model.RememberMe);
 
             if (result.Succeeded)
             {
@@ -82,6 +85,7 @@ namespace GiftOfTheGivers_ST10239864.Controllers
         // Logout
         // -------------------------
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public async Task<IActionResult> Logout()
         {
             await _userOperations.LogoutAsync();

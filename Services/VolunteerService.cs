@@ -19,7 +19,7 @@ namespace GiftOfTheGivers_ST10239864.Services
         public async Task<Volunteer?> GetByIdAsync(int id) =>
             await _db.Volunteers.FindAsync(id);
 
-        public async Task RegisterAsync(Volunteer volunteer)
+        public async Task CreateAsync(Volunteer volunteer)
         {
             _db.Volunteers.Add(volunteer);
             await _db.SaveChangesAsync();

@@ -6,6 +6,6 @@ namespace GiftOfTheGivers_ST10239864.Services
     {
         Task<IEnumerable<Volunteer>> GetAllAsync();
         Task<Volunteer?> GetByIdAsync(int id);
-        Task RegisterAsync(Volunteer volunteer);
+        Task CreateAsync(Volunteer volunteer);
     }
 }

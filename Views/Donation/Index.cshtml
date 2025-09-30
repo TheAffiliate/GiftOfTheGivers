@@ -1,16 +1,31 @@
 ﻿@model IEnumerable<GiftOfTheGivers_ST10239864.Models.Donation>
-<h2>Donations</h2>
-<p><a class="btn btn-orange" asp-action="Create">Make a Donation</a></p>
-<table class="table">
-    <thead><tr><th>Resource</th><th>Quantity</th><th>Date</th></tr></thead>
+
+<h2 class="text-orange">All Donations</h2>
+
+<table class="table table-striped">
+    <thead class="bg-deepgreen text-white">
+        <tr>
+            <th>Donor</th>
+            <th>Type</th>
+            <th>Quantity</th>
+            <th>Date</th>
+            <th></th>
+        </tr>
+    </thead>
     <tbody>
-        @foreach (var d in Model)
-        {
-            <tr>
-                <td>@d.ResourceType</td>
-                <td>@d.Quantity</td>
-                <td>@d.DonatedAt.ToLocalTime().ToString("g")</td>
-            </tr>
-        }
+    @foreach (var donation in Model)
+    {
+        <tr>
+            <td>@donation.DonorName</td>
+            <td>@donation.Type</td>
+            <td>@donation.Quantity</td>
+            <td>@donation.DateDonated.ToShortDateString()</td>
+            <td>
+                <a asp-action="Details" asp-route-id="@donation.Id" class="btn btn-sm btn-orange">Details</a>
+            </td>
+        </tr>
+    }
     </tbody>
 </table>
+
+<a asp-action="Create" class="btn btn-deepgreen">Make a Donation</a>

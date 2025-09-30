@@ -9,8 +9,8 @@ namespace GiftOfTheGivers_ST10239864.Services
         Task<IEnumerable<ApplicationUser>> GetAllAsync();
         Task UpdateProfileAsync(ApplicationUser user);
 
-        // Authenticated Methods
-        Task<IdentityResult> RegisterAsync(ApplicationUser user, string password);
+        // 🔑 Authentication methods
+        Task<IdentityResult> RegisterAsync(ApplicationUser user, string password, bool autoLogin = true);
         Task<SignInResult> LoginAsync(string email, string password, bool rememberMe);
         Task LogoutAsync();
     }

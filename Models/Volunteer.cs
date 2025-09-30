@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace GiftOfTheGivers_ST10239864.Models
 {
@@ -7,11 +8,21 @@ namespace GiftOfTheGivers_ST10239864.Models
         public int Id { get; set; }
 
         [Required]
-        public string FullName { get; set; }  // <-- Add this
+        [StringLength(100)]
+        [Column("FullName")] // Maps to the existing column in DB
+        public string FullName { get; set; } = string.Empty;
 
         [Required]
-        public string Skills { get; set; }
+        [EmailAddress]
+        [Column("Email")] // Maps to the existing column in DB
+        public string Email { get; set; } = string.Empty;
 
-        public string Availability { get; set; }
+        [Required]
+        [StringLength(200)]
+        public string Skills { get; set; } = string.Empty;
+
+        [StringLength(100)]
+        [Column("Availability")] // Maps to the existing column in DB
+        public string? Availability { get; set; }
     }
 }
