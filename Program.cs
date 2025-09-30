@@ -19,11 +19,14 @@ builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlServer(connectionString));
 
 // ----------------------
-// 3. Add Identity (with EF Core storage)
+// 3. Add Identity with Roles
 // ----------------------
-builder.Services.AddDefaultIdentity<ApplicationUser>(options =>
-    options.SignIn.RequireConfirmedAccount = false)
-    .AddEntityFrameworkStores<AppDbContext>();
+builder.Services.AddIdentity<ApplicationUser, IdentityRole>(options =>
+    {
+        options.SignIn.RequireConfirmedAccount = false;
+    })
+    .AddEntityFrameworkStores<AppDbContext>()
+    .AddDefaultTokenProviders();
 
 // ----------------------
 // 4. Register custom services

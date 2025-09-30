@@ -31,15 +31,23 @@ namespace GiftOfTheGivers_ST10239864.Services
         {
             var existing = await _userManager.FindByIdAsync(user.Id);
             if (existing == null) throw new Exception("User not found");
+
             existing.FullName = user.FullName;
             existing.Location = user.Location;
             await _userManager.UpdateAsync(existing);
         }
 
-        // New methods
-        public async Task<IdentityResult> RegisterAsync(ApplicationUser user, string password)
+        // 🔑 Authentication methods
+        public async Task<IdentityResult> RegisterAsync(ApplicationUser user, string password, bool autoLogin = true)
         {
-            return await _userManager.CreateAsync(user, password);
+            var result = await _userManager.CreateAsync(user, password);
+
+            if (result.Succeeded && autoLogin)
+            {
+                await _signInManager.SignInAsync(user, isPersistent: false);
+            }
+
+            return result;
         }
 
         public async Task<SignInResult> LoginAsync(string email, string password, bool rememberMe)
@@ -47,12 +55,10 @@ namespace GiftOfTheGivers_ST10239864.Services
             var user = await _userManager.FindByEmailAsync(email);
             if (user == null) return SignInResult.Failed;
 
-            return await _signInManager.PasswordSignInAsync(user, password, rememberMe, false);
+            return await _signInManager.PasswordSignInAsync(user, password, rememberMe, lockoutOnFailure: false);
         }
 
-        public async Task LogoutAsync()
-        {
+        public async Task LogoutAsync() =>
             await _signInManager.SignOutAsync();
-        }
     }
 }
