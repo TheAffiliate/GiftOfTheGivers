@@ -2,25 +2,44 @@
 @{
     ViewData["Title"] = "Incidents";
 }
-<h2>Reported Incidents</h2>
-<p><a class="btn btn-orange" asp-action="Create">Report Incident</a></p>
+
+<h2 class="text-orange">🌍 Reported Incidents</h2>
+
+<p>
+    <a class="btn btn-deepgreen" asp-action="Create">➕ Report New Incident</a>
+</p>
 
 @if (TempData["Message"] != null)
 {
-    <div class="alert alert-success">@TempData["Message"]</div>
+    <div class="alert alert-success program-card">
+        @TempData["Message"]
+    </div>
 }
 
-<table class="table table-striped">
-    <thead><tr><th>Title</th><th>Location</th><th>Date</th><th></th></tr></thead>
-    <tbody>
-        @foreach (var item in Model)
-        {
+<div class="table-responsive mt-3">
+    <table class="table table-striped table-hover shadow-sm">
+        <thead class="bg-deepgreen text-white">
             <tr>
-                <td>@item.Title</td>
-                <td>@item.Location</td>
-                <td>@item.ReportedAt.ToLocalTime().ToString("g")</td>
-                <td><a asp-action="Details" asp-route-id="@item.Id">Details</a></td>
+                <th>Title</th>
+                <th>Location</th>
+                <th>Date Reported</th>
+                <th></th>
             </tr>
-        }
-    </tbody>
-</table>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td class="fw-bold">@item.Title</td>
+                    <td>@item.Location</td>
+                    <td>@item.ReportedAt.ToLocalTime().ToString("g")</td>
+                    <td>
+                        <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-sm btn-orange">
+                            🔎 View
+                        </a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

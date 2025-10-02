@@ -1,21 +1,47 @@
 ﻿@model IEnumerable<GiftOfTheGivers_ST10239864.Models.Volunteer>
-<h2>Volunteers</h2>
-<p><a class="btn btn-orange" asp-action="Register">Register as Volunteer</a></p>
 
-@if (TempData["Message"] != null)
-{
-    <div class="alert alert-success">@TempData["Message"]</div>
-}
+<h2 class="text-orange">Volunteers</h2>
 
-<table class="table">
-    <thead><tr><th>Name</th><th>Skills</th></tr></thead>
+<table class="table table-striped">
+    <thead class="bg-deepgreen text-white">
+        <tr>
+            <th>Name</th>
+            <th>Skills</th>
+            <th>Email</th>
+            <th>Availability</th>
+            <th></th>
+        </tr>
+    </thead>
     <tbody>
-        @foreach (var v in Model)
+        @if (Model != null && Model.Any())
+        {
+            foreach (var volunteer in Model)
+            {
+                <tr>
+                    <td>@volunteer.FullName</td>
+                    <td>@volunteer.Skills</td>
+                    <td>@volunteer.Email</td>
+                    <td>@volunteer.Availability</td>
+                    <td>
+                        <a asp-action="Details" asp-route-id="@volunteer.Id" class="btn btn-sm btn-orange">Details</a>
+                    </td>
+                </tr>
+            }
+        }
+        else
         {
             <tr>
-                <td>@v.FullName</td>
-                <td>@v.Skills</td>
+                <td colspan="5" class="text-center">No volunteers have registered yet.</td>
             </tr>
         }
     </tbody>
 </table>
+
+<a asp-action="Create" class="btn btn-deepgreen">Register as a Volunteer</a>
+
+<hr />
+
+<footer class="mt-4">
+    <p><strong>Gift Of The Givers</strong> — Delivering emergency relief, community development and sustainable impact.</p>
+    <p>© 2025 - Gift Of The Givers</p>
+</footer>

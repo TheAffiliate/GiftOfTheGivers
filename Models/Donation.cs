@@ -1,5 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
+﻿using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace GiftOfTheGivers_ST10239864.Models
 {
@@ -8,23 +8,24 @@ namespace GiftOfTheGivers_ST10239864.Models
         public int Id { get; set; }
 
         [Required]
-        public string Item { get; set; } = string.Empty;
+        [StringLength(100)]
+        public string DonorName { get; set; } = string.Empty;
 
         [Required]
+        [StringLength(50)]
+        public string Type { get; set; } = string.Empty; // e.g., Food, Clothes, Medicine
+
+        [Required]
+        [Range(1, int.MaxValue, ErrorMessage = "Quantity must be at least 1.")]
         public int Quantity { get; set; }
-
-        [Required]
-        public string Type { get; set; } = string.Empty; // e.g., Food, Clothing, Medical
 
         public DateTime DateDonated { get; set; } = DateTime.Now;
 
-        // 🔑 Link to the user who donated
-        [Required]
-        public string UserId { get; set; } = string.Empty;
-
-        [ForeignKey("UserId")]
+        // Optional: link donations to a logged-in user
+        public string? UserId { get; set; }
         public ApplicationUser? User { get; set; }
 
-        public string DonorName { get; set; } = string.Empty;
+        public SubmissionStatus Status { get; set; } = SubmissionStatus.Pending;
+        public string? AdminMessage { get; set; }
     }
 }

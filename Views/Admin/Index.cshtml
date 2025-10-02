@@ -1,0 +1,77 @@
+﻿@model GiftOfTheGivers_ST10239864.ViewModels.AdminDashboardViewModel
+
+<h2 class="text-orange">Admin Dashboard</h2>
+
+<div class="row">
+    <!-- Donations -->
+    <div class="col-md-4">
+        <div class="card p-3 bg-light">
+            <h4>Donations</h4>
+            <table class="table table-sm">
+                @foreach (var d in Model.Donations)
+                {
+                    <tr>
+                        <td>@d.Type (@d.Quantity)</td>
+                        <td>Status: @d.Status</td>
+                        <td>
+                            <form asp-action="ReviewDonation" method="post">
+                                <input type="hidden" name="id" value="@d.Id" />
+                                <input type="text" name="message" placeholder="Reason (optional)" class="form-control form-control-sm mb-1" />
+                                <button name="approve" value="true" class="btn btn-success btn-sm">Approve</button>
+                                <button name="approve" value="false" class="btn btn-danger btn-sm">Reject</button>
+                            </form>
+                        </td>
+                    </tr>
+                }
+            </table>
+        </div>
+    </div>
+
+    <!-- Volunteers -->
+    <div class="col-md-4">
+        <div class="card p-3 bg-light">
+            <h4>Volunteers</h4>
+            <table class="table table-sm">
+                @foreach (var v in Model.Volunteers)
+                {
+                    <tr>
+                        <td>@v.FullName (@v.Skills)</td>
+                        <td>Status: @v.Status</td>
+                        <td>
+                            <form asp-action="ReviewVolunteer" method="post">
+                                <input type="hidden" name="id" value="@v.Id" />
+                                <input type="text" name="message" placeholder="Reason (optional)" class="form-control form-control-sm mb-1" />
+                                <button name="approve" value="true" class="btn btn-success btn-sm">Approve</button>
+                                <button name="approve" value="false" class="btn btn-danger btn-sm">Reject</button>
+                            </form>
+                        </td>
+                    </tr>
+                }
+            </table>
+        </div>
+    </div>
+
+    <!-- Incidents -->
+    <div class="col-md-4">
+        <div class="card p-3 bg-light">
+            <h4>Incidents</h4>
+            <table class="table table-sm">
+                @foreach (var i in Model.Incidents)
+                {
+                    <tr>
+                        <td>@i.Title (@i.Location)</td>
+                        <td>Status: @i.Status</td>
+                        <td>
+                            <form asp-action="ReviewIncident" method="post">
+                                <input type="hidden" name="id" value="@i.Id" />
+                                <input type="text" name="message" placeholder="Reason (optional)" class="form-control form-control-sm mb-1" />
+                                <button name="approve" value="true" class="btn btn-success btn-sm">Approve</button>
+                                <button name="approve" value="false" class="btn btn-danger btn-sm">Reject</button>
+                            </form>
+                        </td>
+                    </tr>
+                }
+            </table>
+        </div>
+    </div>
+</div>

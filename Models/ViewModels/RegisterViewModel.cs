@@ -20,5 +20,7 @@ namespace GiftOfTheGivers_ST10239864.Models.ViewModels
         [DataType(DataType.Password)]
         [Compare("Password")]
         public string ConfirmPassword { get; set; }
+
+        public bool RegisterAsAdmin { get; set; }
     }
 }

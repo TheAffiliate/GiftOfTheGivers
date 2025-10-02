@@ -1,28 +1,33 @@
 ﻿using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
 
 namespace GiftOfTheGivers_ST10239864.Models
-{
+{   
     public class Volunteer
     {
         public int Id { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Full name is required")]
         [StringLength(100)]
-        [Column("FullName")] // Maps to the existing column in DB
         public string FullName { get; set; } = string.Empty;
 
-        [Required]
+        [Required(ErrorMessage = "Email is required")]
         [EmailAddress]
-        [Column("Email")] // Maps to the existing column in DB
         public string Email { get; set; } = string.Empty;
 
-        [Required]
+        [Phone]
+        [Display(Name = "Phone Number")]
+        public string? PhoneNumber { get; set; }
+
+        [Required(ErrorMessage = "Please provide your skills")]
         [StringLength(200)]
         public string Skills { get; set; } = string.Empty;
 
+        [Required(ErrorMessage = "Please indicate your availability")]
         [StringLength(100)]
-        [Column("Availability")] // Maps to the existing column in DB
-        public string? Availability { get; set; }
+        public string Availability { get; set; } = string.Empty;
+
+        public SubmissionStatus Status { get; set; } = SubmissionStatus.Pending;
+        public string? AdminMessage { get; set; }
+        public string? UserId { get; set; }
     }
 }

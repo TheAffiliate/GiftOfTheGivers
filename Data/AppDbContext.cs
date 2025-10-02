@@ -11,5 +11,6 @@ namespace GiftOfTheGivers_ST10239864.Data
         public DbSet<IncidentReport> IncidentReports { get; set; }
         public DbSet<Donation> Donations { get; set; }
         public DbSet<Volunteer> Volunteers { get; set; }
+        public DbSet<Notification> Notifications { get; set; }
     }
 }

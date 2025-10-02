@@ -1,0 +1,148 @@
+﻿@model GiftOfTheGivers_ST10239864.ViewModels.UserProfileViewModel
+@using System.Linq
+
+<h2 class="text-orange">@Model.UserName's Profile</h2>
+<p class="text-muted">@Model.Email</p>
+
+<p>
+    <a asp-action="Inbox" class="btn btn-orange">Inbox (@(Model.Notifications?.Count() ?? 0))</a>
+    <a asp-controller="Donation" asp-action="Index" class="btn btn-deepgreen">My Donations</a>
+</p>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="card program-card mb-3">
+            <div class="card-body">
+                <h4>My Donations</h4>
+
+                @if (Model.Donations != null && Model.Donations.Any())
+                {
+                    <table class="table table-sm">
+                        <thead class="bg-deepgreen text-white">
+                            <tr>
+                                <th>Type</th>
+                                <th>Quantity</th>
+                                <th>Status</th>
+                                <th>Admin Message</th>
+                                <th>Date</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var d in Model.Donations)
+                            {
+                                <tr>
+                                    <td>@d.Type</td>
+                                    <td>@d.Quantity</td>
+                                    <td>@d.Status</td>
+                                    <td>@(string.IsNullOrWhiteSpace(d.AdminMessage) ? "-" : d.AdminMessage)</td>
+                                    <td>@d.DateDonated.ToLocalTime().ToString("g")</td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                }
+                else
+                {
+                    <p>No donations submitted yet.</p>
+                }
+            </div>
+        </div>
+
+        <div class="card program-card mb-3">
+            <div class="card-body">
+                <h4>Volunteer Registrations</h4>
+
+                @if (Model.Volunteers != null && Model.Volunteers.Any())
+                {
+                    <table class="table table-sm">
+                        <thead class="bg-deepgreen text-white">
+                            <tr>
+                                <th>Name</th>
+                                <th>Skills</th>
+                                <th>Availability</th>
+                                <th>Status</th>
+                                <th>Admin Message</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var v in Model.Volunteers)
+                            {
+                                <tr>
+                                    <td>@v.FullName</td>
+                                    <td>@v.Skills</td>
+                                    <td>@v.Availability</td>
+                                    <td>@v.Status</td>
+                                    <td>@(string.IsNullOrWhiteSpace(v.AdminMessage) ? "-" : v.AdminMessage)</td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                }
+                else
+                {
+                    <p>You are not registered as a volunteer yet.</p>
+                }
+            </div>
+        </div>
+
+        <div class="card program-card mb-3">
+            <div class="card-body">
+                <h4>Incident Reports</h4>
+
+                @if (Model.Incidents != null && Model.Incidents.Any())
+                {
+                    <table class="table table-sm">
+                        <thead class="bg-deepgreen text-white">
+                            <tr>
+                                <th>Title</th>
+                                <th>Location</th>
+                                <th>Status</th>
+                                <th>Admin Message</th>
+                                <th>Date</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var i in Model.Incidents)
+                            {
+                                <tr>
+                                    <td>@i.Title</td>
+                                    <td>@i.Location</td>
+                                    <td>@i.Status</td>
+                                    <td>@(string.IsNullOrWhiteSpace(i.AdminMessage) ? "-" : i.AdminMessage)</td>
+                                    <td>@i.ReportedAt.ToLocalTime().ToString("g")</td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                }
+                else
+                {
+                    <p>No incident reports submitted yet.</p>
+                }
+            </div>
+        </div>
+
+        <div class="card program-card mb-3">
+            <div class="card-body">
+                <h4>Notifications</h4>
+
+                @if (Model.Notifications != null && Model.Notifications.Any())
+                {
+                    <ul class="list-group">
+                        @foreach (var n in Model.Notifications)
+                        {
+                            <li class="list-group-item @(n.IsRead ? "" : "fw-bold")">
+                                @n.Message
+                                <small class="text-muted float-end">@n.SentAt.ToLocalTime().ToString("g")</small>
+                            </li>
+                        }
+                    </ul>
+                }
+                else
+                {
+                    <p>No notifications yet.</p>
+                }
+            </div>
+        </div>
+    </div>
+</div>

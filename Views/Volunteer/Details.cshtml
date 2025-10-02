@@ -1,0 +1,14 @@
+﻿@model GiftOfTheGivers_ST10239864.Models.Volunteer
+
+<h2 class="text-orange">Volunteer Details</h2>
+
+<div class="card program-card mt-3">
+    <div class="card-body">
+        <h4>@Model.FullName</h4>
+        <p><strong>Skills:</strong> @Model.Skills</p>
+        <p><strong>Email:</strong> @Model.Email</p>
+        <p><strong>Availability:</strong> @Model.Availability</p>
+    </div>
+</div>
+
+<a asp-action="Index" class="btn btn-deepgreen mt-3">Back to Volunteers</a>

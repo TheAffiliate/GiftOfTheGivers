@@ -14,25 +14,21 @@ namespace GiftOfTheGivers_ST10239864.Services
         }
 
         public async Task<IEnumerable<Donation>> GetAllAsync() =>
-            await _db.Donations
-                     .Include(d => d.User) // include user info for admin view
-                     .ToListAsync();
-
-        public async Task<IEnumerable<Donation>> GetByUserIdAsync(string userId) =>
-            await _db.Donations
-                     .Where(d => d.UserId == userId)
-                     .Include(d => d.User)
-                     .ToListAsync();
+            await _db.Donations.ToListAsync();
 
         public async Task<Donation?> GetByIdAsync(int id) =>
-            await _db.Donations
-                     .Include(d => d.User)
-                     .FirstOrDefaultAsync(d => d.Id == id);
+            await _db.Donations.FindAsync(id);
 
         public async Task CreateAsync(Donation donation)
         {
             _db.Donations.Add(donation);
             await _db.SaveChangesAsync();
         }
+
+        // ✅ New method for fetching donations by UserId
+        public async Task<IEnumerable<Donation>> GetByUserIdAsync(string userId) =>
+            await _db.Donations
+                .Where(d => d.UserId == userId)
+                .ToListAsync();
     }
 }
