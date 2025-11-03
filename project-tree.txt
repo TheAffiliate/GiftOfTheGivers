@@ -1,0 +1,443 @@
+﻿Folder PATH listing
+Volume serial number is 4CF9-2EC1
+C:.
+│   .gitattributes
+│   .gitignore
+│   appsettings.Development.json
+│   appsettings.json
+│   GiftOfTheGivers_ST10239864.csproj
+│   GiftOfTheGivers_ST10239864.csproj.user
+│   GiftOfTheGivers_ST10239864.sln
+│   Program.cs
+│   project-structure.txt
+│   project-tree.txt
+│   README.md
+│   
+├───.github
+│   └───workflows
+├───bin
+│   └───Debug
+│       └───net8.0
+│           │   appsettings.Development.json
+│           │   appsettings.json
+│           │   Azure.Core.dll
+│           │   Azure.Identity.dll
+│           │   GiftOfTheGivers_ST10239864.deps.json
+│           │   GiftOfTheGivers_ST10239864.dll
+│           │   GiftOfTheGivers_ST10239864.exe
+│           │   GiftOfTheGivers_ST10239864.pdb
+│           │   GiftOfTheGivers_ST10239864.runtimeconfig.json
+│           │   GiftOfTheGivers_ST10239864.staticwebassets.endpoints.json
+│           │   GiftOfTheGivers_ST10239864.staticwebassets.runtime.json
+│           │   Humanizer.dll
+│           │   Microsoft.AspNetCore.Cryptography.Internal.dll
+│           │   Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+│           │   Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+│           │   Microsoft.AspNetCore.Identity.UI.dll
+│           │   Microsoft.Bcl.AsyncInterfaces.dll
+│           │   Microsoft.CodeAnalysis.CSharp.dll
+│           │   Microsoft.CodeAnalysis.CSharp.Workspaces.dll
+│           │   Microsoft.CodeAnalysis.dll
+│           │   Microsoft.CodeAnalysis.Workspaces.dll
+│           │   Microsoft.Data.SqlClient.dll
+│           │   Microsoft.EntityFrameworkCore.Abstractions.dll
+│           │   Microsoft.EntityFrameworkCore.Design.dll
+│           │   Microsoft.EntityFrameworkCore.dll
+│           │   Microsoft.EntityFrameworkCore.Relational.dll
+│           │   Microsoft.EntityFrameworkCore.SqlServer.dll
+│           │   Microsoft.Extensions.DependencyModel.dll
+│           │   Microsoft.Extensions.FileProviders.Embedded.dll
+│           │   Microsoft.Extensions.Identity.Core.dll
+│           │   Microsoft.Extensions.Identity.Stores.dll
+│           │   Microsoft.Extensions.Options.dll
+│           │   Microsoft.Identity.Client.dll
+│           │   Microsoft.Identity.Client.Extensions.Msal.dll
+│           │   Microsoft.IdentityModel.Abstractions.dll
+│           │   Microsoft.IdentityModel.JsonWebTokens.dll
+│           │   Microsoft.IdentityModel.Logging.dll
+│           │   Microsoft.IdentityModel.Protocols.dll
+│           │   Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+│           │   Microsoft.IdentityModel.Tokens.dll
+│           │   Microsoft.SqlServer.Server.dll
+│           │   Microsoft.Win32.SystemEvents.dll
+│           │   Mono.TextTemplating.dll
+│           │   System.CodeDom.dll
+│           │   System.Composition.AttributedModel.dll
+│           │   System.Composition.Convention.dll
+│           │   System.Composition.Hosting.dll
+│           │   System.Composition.Runtime.dll
+│           │   System.Composition.TypedParts.dll
+│           │   System.Configuration.ConfigurationManager.dll
+│           │   System.Drawing.Common.dll
+│           │   System.IdentityModel.Tokens.Jwt.dll
+│           │   System.Memory.Data.dll
+│           │   System.Runtime.Caching.dll
+│           │   System.Security.Cryptography.ProtectedData.dll
+│           │   System.Security.Permissions.dll
+│           │   System.Windows.Extensions.dll
+│           │   
+│           ├───cs
+│           │       Microsoft.CodeAnalysis.CSharp.resources.dll
+│           │       Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+│           │       Microsoft.CodeAnalysis.resources.dll
+│           │       Microsoft.CodeAnalysis.Workspaces.resources.dll
+│           │       
+│           ├───de
+│           │       Microsoft.CodeAnalysis.CSharp.resources.dll
+│           │       Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+│           │       Microsoft.CodeAnalysis.resources.dll
+│           │       Microsoft.CodeAnalysis.Workspaces.resources.dll
+│           │       
+│           ├───es
+│           │       Microsoft.CodeAnalysis.CSharp.resources.dll
+│           │       Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+│           │       Microsoft.CodeAnalysis.resources.dll
+│           │       Microsoft.CodeAnalysis.Workspaces.resources.dll
+│           │       
+│           ├───fr
+│           │       Microsoft.CodeAnalysis.CSharp.resources.dll
+│           │       Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+│           │       Microsoft.CodeAnalysis.resources.dll
+│           │       Microsoft.CodeAnalysis.Workspaces.resources.dll
+│           │       
+│           ├───it
+│           │       Microsoft.CodeAnalysis.CSharp.resources.dll
+│           │       Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+│           │       Microsoft.CodeAnalysis.resources.dll
+│           │       Microsoft.CodeAnalysis.Workspaces.resources.dll
+│           │       
+│           ├───ja
+│           │       Microsoft.CodeAnalysis.CSharp.resources.dll
+│           │       Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+│           │       Microsoft.CodeAnalysis.resources.dll
+│           │       Microsoft.CodeAnalysis.Workspaces.resources.dll
+│           │       
+│           ├───ko
+│           │       Microsoft.CodeAnalysis.CSharp.resources.dll
+│           │       Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+│           │       Microsoft.CodeAnalysis.resources.dll
+│           │       Microsoft.CodeAnalysis.Workspaces.resources.dll
+│           │       
+│           ├───pl
+│           │       Microsoft.CodeAnalysis.CSharp.resources.dll
+│           │       Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+│           │       Microsoft.CodeAnalysis.resources.dll
+│           │       Microsoft.CodeAnalysis.Workspaces.resources.dll
+│           │       
+│           ├───pt-BR
+│           │       Microsoft.CodeAnalysis.CSharp.resources.dll
+│           │       Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+│           │       Microsoft.CodeAnalysis.resources.dll
+│           │       Microsoft.CodeAnalysis.Workspaces.resources.dll
+│           │       
+│           ├───ru
+│           │       Microsoft.CodeAnalysis.CSharp.resources.dll
+│           │       Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+│           │       Microsoft.CodeAnalysis.resources.dll
+│           │       Microsoft.CodeAnalysis.Workspaces.resources.dll
+│           │       
+│           ├───runtimes
+│           │   ├───unix
+│           │   │   └───lib
+│           │   │       └───net6.0
+│           │   │               Microsoft.Data.SqlClient.dll
+│           │   │               System.Drawing.Common.dll
+│           │   │               
+│           │   ├───win
+│           │   │   └───lib
+│           │   │       └───net6.0
+│           │   │               Microsoft.Data.SqlClient.dll
+│           │   │               Microsoft.Win32.SystemEvents.dll
+│           │   │               System.Drawing.Common.dll
+│           │   │               System.Runtime.Caching.dll
+│           │   │               System.Security.Cryptography.ProtectedData.dll
+│           │   │               System.Windows.Extensions.dll
+│           │   │               
+│           │   ├───win-arm
+│           │   │   └───native
+│           │   │           Microsoft.Data.SqlClient.SNI.dll
+│           │   │           
+│           │   ├───win-arm64
+│           │   │   └───native
+│           │   │           Microsoft.Data.SqlClient.SNI.dll
+│           │   │           
+│           │   ├───win-x64
+│           │   │   └───native
+│           │   │           Microsoft.Data.SqlClient.SNI.dll
+│           │   │           
+│           │   └───win-x86
+│           │       └───native
+│           │               Microsoft.Data.SqlClient.SNI.dll
+│           │               
+│           ├───tr
+│           │       Microsoft.CodeAnalysis.CSharp.resources.dll
+│           │       Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+│           │       Microsoft.CodeAnalysis.resources.dll
+│           │       Microsoft.CodeAnalysis.Workspaces.resources.dll
+│           │       
+│           ├───zh-Hans
+│           │       Microsoft.CodeAnalysis.CSharp.resources.dll
+│           │       Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+│           │       Microsoft.CodeAnalysis.resources.dll
+│           │       Microsoft.CodeAnalysis.Workspaces.resources.dll
+│           │       
+│           └───zh-Hant
+│                   Microsoft.CodeAnalysis.CSharp.resources.dll
+│                   Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+│                   Microsoft.CodeAnalysis.resources.dll
+│                   Microsoft.CodeAnalysis.Workspaces.resources.dll
+│                   
+├───Controllers
+│       AccountController.cs
+│       AdminController.cs
+│       DonationController.cs
+│       HomeController.cs
+│       IncidentController.cs
+│       ProfileController.cs
+│       VolunteerController.cs
+│       
+├───Data
+│       AppDbContext.cs
+│       
+├───Migrations
+│       20250928183632_InitialCreate.cs
+│       20250928183632_InitialCreate.Designer.cs
+│       20250929154334_RenameDonationColumns.cs
+│       20250929154334_RenameDonationColumns.Designer.cs
+│       20250929205744_AddUserIdToDonations.cs
+│       20250929205744_AddUserIdToDonations.Designer.cs
+│       20250929230106_UpdateVolunteerWithFullNameAndSkills.cs
+│       20250929230106_UpdateVolunteerWithFullNameAndSkills.Designer.cs
+│       20250929232226_AddAvailabilityAndEmailToVolunteer.cs
+│       20250929232226_AddAvailabilityAndEmailToVolunteer.Designer.cs
+│       20250930161315_AddVolunteerTable.cs
+│       20250930161315_AddVolunteerTable.Designer.cs
+│       20250930170808_UpdateDonationModel.cs
+│       20250930170808_UpdateDonationModel.Designer.cs
+│       20251001212521_AddSubmissionStatusAndAdminMessage.cs
+│       20251001212521_AddSubmissionStatusAndAdminMessage.Designer.cs
+│       AppDbContextModelSnapshot.cs
+│       
+├───Models
+│   │   ApplicationUser.cs
+│   │   Donation.cs
+│   │   ErrorViewModel.cs
+│   │   IncidentReport.cs
+│   │   Notification.cs
+│   │   SubmissionStatus.cs
+│   │   Volunteer.cs
+│   │   
+│   └───ViewModels
+│           AdminDashboardViewModel.cs
+│           LoginViewModel.cs
+│           RegisterViewModel.cs
+│           UserProfileViewModel.cs
+│           
+├───obj
+│   │   GiftOfTheGivers_ST10239864.csproj.EntityFrameworkCore.targets
+│   │   GiftOfTheGivers_ST10239864.csproj.nuget.dgspec.json
+│   │   GiftOfTheGivers_ST10239864.csproj.nuget.g.props
+│   │   GiftOfTheGivers_ST10239864.csproj.nuget.g.targets
+│   │   project.assets.json
+│   │   project.nuget.cache
+│   │   
+│   └───Debug
+│       └───net8.0
+│           │   .NETCoreApp,Version=v8.0.AssemblyAttributes.cs
+│           │   ApiEndpoints.json
+│           │   apphost.exe
+│           │   GiftOfTh.CB5D062B.Up2Date
+│           │   GiftOfTheGivers_ST10239864.AssemblyInfo.cs
+│           │   GiftOfTheGivers_ST10239864.AssemblyInfoInputs.cache
+│           │   GiftOfTheGivers_ST10239864.assets.cache
+│           │   GiftOfTheGivers_ST10239864.csproj.AssemblyReference.cache
+│           │   GiftOfTheGivers_ST10239864.csproj.BuildWithSkipAnalyzers
+│           │   GiftOfTheGivers_ST10239864.csproj.CoreCompileInputs.cache
+│           │   GiftOfTheGivers_ST10239864.csproj.FileListAbsolute.txt
+│           │   GiftOfTheGivers_ST10239864.dll
+│           │   GiftOfTheGivers_ST10239864.GeneratedMSBuildEditorConfig.editorconfig
+│           │   GiftOfTheGivers_ST10239864.genruntimeconfig.cache
+│           │   GiftOfTheGivers_ST10239864.GlobalUsings.g.cs
+│           │   GiftOfTheGivers_ST10239864.MvcApplicationPartsAssemblyInfo.cache
+│           │   GiftOfTheGivers_ST10239864.MvcApplicationPartsAssemblyInfo.cs
+│           │   GiftOfTheGivers_ST10239864.pdb
+│           │   GiftOfTheGivers_ST10239864.RazorAssemblyInfo.cache
+│           │   GiftOfTheGivers_ST10239864.RazorAssemblyInfo.cs
+│           │   GiftOfTheGivers_ST10239864.sourcelink.json
+│           │   rjimswa.dswa.cache.json
+│           │   rjsmcshtml.dswa.cache.json
+│           │   rjsmrazor.dswa.cache.json
+│           │   rpswa.dswa.cache.json
+│           │   staticwebassets.build.endpoints.json
+│           │   staticwebassets.build.json
+│           │   staticwebassets.build.json.cache
+│           │   staticwebassets.development.json
+│           │   staticwebassets.references.upToDateCheck.txt
+│           │   staticwebassets.removed.txt
+│           │   staticwebassets.upToDateCheck.txt
+│           │   
+│           ├───ref
+│           │       GiftOfTheGivers_ST10239864.dll
+│           │       
+│           ├───refint
+│           │       GiftOfTheGivers_ST10239864.dll
+│           │       
+│           ├───scopedcss
+│           │   ├───bundle
+│           │   │       GiftOfTheGivers_ST10239864.styles.css
+│           │   │       
+│           │   ├───projectbundle
+│           │   │       GiftOfTheGivers_ST10239864.bundle.scp.css
+│           │   │       
+│           │   └───Views
+│           │       └───Shared
+│           │               _Layout.cshtml.rz.scp.css
+│           │               
+│           └───staticwebassets
+├───Properties
+│       launchSettings.json
+│       
+├───Services
+│       DonationService.cs
+│       IDonationService.cs
+│       IIncidentService.cs
+│       IncidentService.cs
+│       IUserOperations.cs
+│       IVolunteerService.cs
+│       TUserOperations.cs
+│       VolunteerService.cs
+│       
+├───UnitTests
+├───Views
+│   │   _ViewImports.cshtml
+│   │   _ViewStart.cshtml
+│   │   
+│   ├───Account
+│   │       Login.cshtml
+│   │       Register.cshtml
+│   │       
+│   ├───Admin
+│   │       Index.cshtml
+│   │       
+│   ├───Donation
+│   │       Create.cshtml
+│   │       Details.cshtml
+│   │       Index.cshtml
+│   │       ThankYou.cshtml
+│   │       
+│   ├───Home
+│   │       Contact.cshtml
+│   │       Index.cshtml
+│   │       Privacy.cshtml
+│   │       Programs.cshtml
+│   │       
+│   ├───Incident
+│   │       Create.cshtml
+│   │       Details.cshtml
+│   │       Index.cshtml
+│   │       
+│   ├───Profile
+│   │       Index.cshtml
+│   │       
+│   ├───Shared
+│   │       Error.cshtml
+│   │       _Layout.cshtml
+│   │       _Layout.cshtml.css
+│   │       _LoginPartial.cshtml
+│   │       _LoginPartial.cshtml.cs
+│   │       _ValidationScriptsPartial.cshtml
+│   │       
+│   └───Volunteer
+│           Details.cshtml
+│           Index.cshtml
+│           Register.cshtml
+│           
+└───wwwroot
+    │   favicon.ico
+    │   
+    ├───css
+    │       site.css
+    │       
+    ├───images
+    │       impact1.jpg
+    │       impact2.jpg
+    │       impact3.jpg
+    │       
+    ├───js
+    │       site.js
+    │       
+    └───lib
+        ├───bootstrap
+        │   │   LICENSE
+        │   │   
+        │   └───dist
+        │       ├───css
+        │       │       bootstrap-grid.css
+        │       │       bootstrap-grid.css.map
+        │       │       bootstrap-grid.min.css
+        │       │       bootstrap-grid.min.css.map
+        │       │       bootstrap-grid.rtl.css
+        │       │       bootstrap-grid.rtl.css.map
+        │       │       bootstrap-grid.rtl.min.css
+        │       │       bootstrap-grid.rtl.min.css.map
+        │       │       bootstrap-reboot.css
+        │       │       bootstrap-reboot.css.map
+        │       │       bootstrap-reboot.min.css
+        │       │       bootstrap-reboot.min.css.map
+        │       │       bootstrap-reboot.rtl.css
+        │       │       bootstrap-reboot.rtl.css.map
+        │       │       bootstrap-reboot.rtl.min.css
+        │       │       bootstrap-reboot.rtl.min.css.map
+        │       │       bootstrap-utilities.css
+        │       │       bootstrap-utilities.css.map
+        │       │       bootstrap-utilities.min.css
+        │       │       bootstrap-utilities.min.css.map
+        │       │       bootstrap-utilities.rtl.css
+        │       │       bootstrap-utilities.rtl.css.map
+        │       │       bootstrap-utilities.rtl.min.css
+        │       │       bootstrap-utilities.rtl.min.css.map
+        │       │       bootstrap.css
+        │       │       bootstrap.css.map
+        │       │       bootstrap.min.css
+        │       │       bootstrap.min.css.map
+        │       │       bootstrap.rtl.css
+        │       │       bootstrap.rtl.css.map
+        │       │       bootstrap.rtl.min.css
+        │       │       bootstrap.rtl.min.css.map
+        │       │       
+        │       └───js
+        │               bootstrap.bundle.js
+        │               bootstrap.bundle.js.map
+        │               bootstrap.bundle.min.js
+        │               bootstrap.bundle.min.js.map
+        │               bootstrap.esm.js
+        │               bootstrap.esm.js.map
+        │               bootstrap.esm.min.js
+        │               bootstrap.esm.min.js.map
+        │               bootstrap.js
+        │               bootstrap.js.map
+        │               bootstrap.min.js
+        │               bootstrap.min.js.map
+        │               
+        ├───jquery
+        │   │   LICENSE.txt
+        │   │   
+        │   └───dist
+        │           jquery.js
+        │           jquery.min.js
+        │           jquery.min.map
+        │           
+        ├───jquery-validation
+        │   │   LICENSE.md
+        │   │   
+        │   └───dist
+        │           additional-methods.js
+        │           additional-methods.min.js
+        │           jquery.validate.js
+        │           jquery.validate.min.js
+        │           
+        └───jquery-validation-unobtrusive
+                jquery.validate.unobtrusive.js
+                jquery.validate.unobtrusive.min.js
+                LICENSE.txt
+                

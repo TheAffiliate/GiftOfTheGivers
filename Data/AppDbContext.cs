@@ -8,9 +8,10 @@ namespace GiftOfTheGivers_ST10239864.Data
     {
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
 
-        public DbSet<IncidentReport> IncidentReports { get; set; }
-        public DbSet<Donation> Donations { get; set; }
-        public DbSet<Volunteer> Volunteers { get; set; }
-        public DbSet<Notification> Notifications { get; set; }
+        //Added 'virtual' keyword to all DbSet properties
+        public virtual DbSet<IncidentReport> IncidentReports { get; set; }
+        public virtual DbSet<Donation> Donations { get; set; }
+        public virtual DbSet<Volunteer> Volunteers { get; set; }
+        public virtual DbSet<Notification> Notifications { get; set; }
     }
 }

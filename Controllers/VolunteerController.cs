@@ -44,9 +44,18 @@ namespace GiftOfTheGivers_ST10239864.Controllers
             if (!ModelState.IsValid)
                 return View("Register", volunteer);
 
-            // ✅ Link to logged-in user
+            // Explicitly check for user existence to prevent NullReferenceException.
             var user = await _userManager.GetUserAsync(User);
-            volunteer.UserId = user?.Id;
+
+            if (user == null)
+            {
+                // This handles the null case and is what makes the unit test pass cleanly.
+                TempData["Error"] = "Could not identify the logged-in user. Please log in again.";
+                return RedirectToAction("Login", "Account");
+            }
+
+            // ✅ Link to logged-in user
+            volunteer.UserId = user.Id;
             volunteer.Status = SubmissionStatus.Pending;
 
             await _volunteerService.CreateAsync(volunteer);
@@ -70,9 +79,18 @@ namespace GiftOfTheGivers_ST10239864.Controllers
             if (!ModelState.IsValid)
                 return View(volunteer);
 
-            // ✅ Link to logged-in user
+            // Apply the same explicit check here as in Create()
             var user = await _userManager.GetUserAsync(User);
-            volunteer.UserId = user?.Id;
+
+            if (user == null)
+            {
+                // This prevents crashes in the production environment and satisfies testing requirements.
+                TempData["Error"] = "Could not identify the logged-in user. Please log in again.";
+                return RedirectToAction("Login", "Account");
+            }
+
+            // ✅ Link to logged-in user
+            volunteer.UserId = user.Id;
             volunteer.Status = SubmissionStatus.Pending;
 
             await _volunteerService.CreateAsync(volunteer);

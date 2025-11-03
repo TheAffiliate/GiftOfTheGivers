@@ -5,8 +5,8 @@ namespace GiftOfTheGivers_ST10239864.ViewModels
 {
     public class UserProfileViewModel
     {
-        public string UserName { get; set; }
-        public string Email { get; set; }
+        public string UserName { get; set; } = string.Empty;
+        public string Email { get; set; } = string.Empty;
 
         public List<Donation> Donations { get; set; } = new();
         public List<Volunteer> Volunteers { get; set; } = new();
