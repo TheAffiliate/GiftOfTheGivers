@@ -1,114 +1,102 @@
-# 🌍 Gift Of The Givers – Disaster Relief Management System
+# Gift Of The Givers – Disaster Relief Management System
+
 
 This is an ASP.NET Core MVC application built to support Gift Of The Givers, enabling the organization to efficiently manage donations, volunteers, and incidents in disaster relief efforts.
 
-The system allows community members to contribute directly, while administrators review and approve requests to ensure effective coordination.
+The system allows community members to donate items, register as volunteers, and enables administrators to track incidents and manage contributions.
 
-#🚀 Features
-🔐 User Authentication & Roles
+🚀 Features
+
+User Authentication
 
 Built on ASP.NET Core Identity.
 
-Users can register & log in with their email.
+Donors and volunteers can register and log in.
 
-Admins register like normal users but can access a dedicated Admin Panel via a navigation link.
+Admins can view all records, while users see their own data.
 
-Role system planned: Admin, User (Donor/Volunteer).
+Donations
 
-🎁 Donations
+Donors can submit donations (type, quantity, date).
 
-Donors can submit donations (type, quantity, description, date).
+Thank-you confirmation page after submitting.
 
-Each donation is linked to the submitting UserId.
+Admins can see all donations; users can see their own.
 
-Admin can approve/reject donations with feedback messages.
+Volunteers
 
-Users get notified in their Profile Inbox when their donation is approved/rejected.
+Volunteers can register with their name, skills, email, and availability.
 
-🙋 Volunteers
+Volunteer profiles include detailed information.
 
-Volunteers can register with skills, email, availability, and location.
+Admins can view all registered volunteers.
 
-Each volunteer record is linked to a UserId.
+Incidents (Emergency Tracking)
 
-Admin can approve/reject volunteer registrations with reasons.
+Capture and display incidents that require relief.
 
-Notifications update the volunteer’s Inbox when decisions are made.
+Volunteers and donors can align efforts with current needs.
 
-🚨 Incidents (Emergency Tracking)
 
-Users can report disaster incidents requiring relief.
-
-Each report is linked to a UserId.
-
-Admins can approve/reject incident reports.
-
-Users get inbox notifications about the status of their report.
-
-📬 Notifications / Inbox
-
-All users have an Inbox on their Profile page.
-
-Displays updates on donations, incidents, and volunteer registrations.
-
-Admin feedback (Approved/Rejected + message) is stored in the database.
-
-#📂 Project Structure
+📂 Project Structure
 GiftOfTheGivers_ST10239864/
-│── Controllers/        # MVC Controllers (Donation, Volunteer, Incident, Admin, Profile, Account, Home)
-│── Models/             # Data models (Donation, Volunteer, Incident, Notification, ApplicationUser)
-│── ViewModels/         # View models (RegisterViewModel, LoginViewModel, UserProfileViewModel, etc.)
-│── Services/           # Business logic & database services (DonationService, VolunteerService, IncidentService)
-│── Data/               # AppDbContext and EF Core setup
-│── Views/              # Razor views (UI pages)
-│    ├── Account/       # Register, Login
-│    ├── Donation/
-│    ├── Volunteer/
-│    ├── Incident/
-│    ├── Profile/
-│    ├── Admin/
-│    └── Shared/
-│── wwwroot/            # Static files (CSS, JS, images, Bootstrap)
-│── Program.cs          # App startup
-│── appsettings.json    # Configurations (DB connection string, Identity)
-│── README.md           # Documentation (this file)
+│── Controllers/         # MVC Controllers (Donation, Volunteer, Incident, Home)
+│── Models/              # Data models (Donation, Volunteer, Incident, ApplicationUser)
+│── Services/            # Business logic & database services
+│── Data/                # AppDbContext and EF Core setup
+│── Views/               # Razor views (UI pages)
+│   ├── Donation/
+│   ├── Volunteer/
+│   ├── Incident/
+│   └── Shared/
+│── wwwroot/             # Static files (CSS, JS, images)
+│── Program.cs           # App startup
+│── appsettings.json     # Configurations (DB connection string, Identity)
+│── README.md            # Documentation (this file)
 
-# ⚙️ Installation & Setup
-
-Clone the repository
-
+⚙️ Installation & Setup
+1. Clone the repository
 git clone https://github.com/your-username/gift-of-the-givers.git
 cd gift-of-the-givers
 
+2. Configure the database
 
-Configure the database
 Update your SQL Server connection string in appsettings.json:
 
 "ConnectionStrings": {
   "DefaultConnection": "Server=(localdb)\\mssqllocaldb;Database=GiftOfTheGiversDB;Trusted_Connection=True;MultipleActiveResultSets=true"
 }
 
-
-Apply migrations and build database
-
+3. Run Entity Framework migrations
 dotnet ef database update
 
-
-⚠️ If schema errors occur (e.g. missing UserId), reset the database:
-
-dotnet ef database drop
-dotnet ef database update
-
-
-Run the application
-
+4. Build and run
 dotnet run
 
 
-Open https://localhost:7095
+Then open https://localhost:7095
  in your browser.
+=======
+📂 Project Structure GiftOfTheGivers_ST10239864/ │── Controllers/ # MVC Controllers (Donation, Volunteer, Incident, Home) │── Models/ # Data models (Donation, Volunteer, Incident, ApplicationUser) │── Services/ # Business logic & database services │── Data/ # AppDbContext and EF Core setup │── Views/ # Razor views (UI pages) │ ├── Donation/ │ ├── Volunteer/ │ ├── Incident/ │ └── Shared/ │── wwwroot/ # Static files (CSS, JS, images) │── Program.cs # App startup │── appsettings.json # Configurations (DB connection string, Identity) │── README.md # Documentation (this file)
 
-# 🛠️ Technologies Used
+⚙️ Installation & Setup
+
+Clone the repository git clone https://github.com/your-username/gift-of-the-givers.git cd gift-of-the-givers
+
+Configure the database
+
+Update your SQL Server connection string in appsettings.json:
+
+"ConnectionStrings": { "DefaultConnection": "Server=(localdb)\mssqllocaldb;Database=GiftOfTheGiversDB;Trusted_Connection=True;MultipleActiveResultSets=true" }
+
+Run Entity Framework migrations dotnet ef database update
+
+Build and run dotnet run
+
+Then open https://localhost:7095 in your browser.
+
+
+🛠️ Technologies Used
 
 ASP.NET Core MVC (7.0+) – Web framework
 
@@ -116,23 +104,25 @@ Entity Framework Core – Database ORM
 
 SQL Server LocalDB – Development database
 
-ASP.NET Core Identity – Authentication & authorization
+ASP.NET Identity – Authentication & authorization
 
 Bootstrap 5 – Frontend styling
 
-# 📌 Future Improvements
+📸 Screenshots
 
-✅ Role-based dashboards for Admin, Donor, and Volunteer.
+(Add screenshots of your Donations, Volunteers, and Incidents pages here.)
 
-✅ Auto-create a default Admin user when the database is reset.
+📌 Future Improvements
 
-📧 Integrate email/SMS notifications for approvals.
+Add role-based dashboards for Admin, Donor, and Volunteer.
 
-📊 Add reporting & analytics for relief efforts.
+Integrate email/SMS notifications for donations & incidents.
 
-🌍 Deploy to Azure App Service with Azure SQL.
+Add reporting & analytics for relief efforts.
 
 👨‍💻 Author
 
-Katlego Sebona / ST10239864
+
+Katlego Sebona
 Disaster Relief Management System for Gift Of The Givers
+
